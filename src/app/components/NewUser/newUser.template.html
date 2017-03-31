@@ -1,0 +1,104 @@
+<form class="form-horizontal" #newUserForm="ngForm">
+  <div class="row">
+    <div class="col-sm-5">
+      <div class="col-xs-12">
+        <div class="form-group form-group-lg">
+          <label class="control-label" for="FirstName">First Name:</label>
+            <input class="form-control" type="text" id="FirstName" placeholder="First Name" [(ngModel)]="user.FirstName" required name="FirstName" #FirstName="ngModel">
+            <div [hidden]="FirstName.valid || FirstName.pristine" class="alert alert-danger">A First Name is Required</div>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-5">
+      <div class="col-xs-12">
+        <div class="form-group form-group-lg">
+          <label class="control-label" for="LastName">Last Name:</label>
+          <input class="form-control" type="text" id="LastName" placeholder="Last Name" [(ngModel)]="user.LastName" required name="LastName" #LastName="ngModel">
+          <div [hidden]="LastName.valid || LastName.pristine" class="alert alert-danger">A Last Name is Required</div>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-2 col-xs-6">
+      <div class="col-xs-12">
+        <div class="form-group">
+          <label class="control-label" for="Suffix">Suffix:</label>
+          <div class="">
+            <select class="form-control" id="Suffix"  [(ngModel)]="user.Suffix" name="Suffix" placeholder="None">
+              <option *ngFor="let suf of suffixes" [value]="suf">{{suf}}</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-xs-12 col-md-6">
+    <div class="col-xs-12">
+      <div class="form-group">
+        <label class=" control-label" for="Nickname">Nickname:</label>
+        <div class="">
+          <input class="form-control" type="text" id="Nickname" placeholder="Nickname" [(ngModel)]="user.Nickname"  name="Nickname">
+        </div>
+      </div>
+    </div>
+    <div class="col-xs-12">
+      <div class="form-group">
+        <label class="control-label" for="Department">Department:</label>
+        <div class="">
+          <input class="form-control" type="text" id="Department" placeholder="Department" [(ngModel)]="user.Department"  name="Department">
+        </div>
+      </div>
+    </div>
+    <div class="col-xs-12">
+      <div class="form-group">
+        <label class="control-label" for="Office">Office:</label>
+        <div class="">
+          <input class="form-control" type="text" id="Office" placeholder="Office" [(ngModel)]="user.Office"  name="Office">
+        </div>
+      </div>
+    </div>
+    <div class="col-xs-12">
+      <div class="form-group">
+        <label class="control-label" for="Position">Position:</label>
+        <div class="">
+          <input class="form-control" type="text" id="Position" placeholder="Position" [(ngModel)]="user.Position"  name="Position">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-xs-12 col-md-6"  >
+    <div class="col-xs-12">
+      <div class="form-group">
+        <label class="control-label" for="Manager">Manager:</label>
+        <div class="">
+          <input class="form-control" type="text" id="Manager" placeholder="Manager" [(ngModel)]="user.ManagerId"  name="Manager">
+        </div>
+      </div>
+    </div>
+    <div class="col-xs-12">
+      <div class="form-group">
+        <label class="control-label" for="Assistant">Assistant:</label>
+        <div class="">
+          <input class="form-control" type="text" id="Assistant" placeholder="Assistant" [(ngModel)]="user.AssistantId"  name="Assistant">
+        </div>
+      </div>
+    </div>
+    <div class="col-xs-12">
+      <div class="form-group">
+        <label class="control-label" for="Spouse">Spouse:</label>
+        <div class="">
+          <input class="form-control" type="text" id="Spouse" placeholder="Spouse" [(ngModel)]="user.Spouse"  name="Spouse">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-xs-12">
+    <div class="form-group">
+      <label class="control-label" for="Address">Address:</label>
+      <input class="form-control" type="text" id="Address" placeholder="Address" [(ngModel)]="user.Address" required name="Address" #Address="ngModel">
+      <div [hidden]="Address.valid || Address.pristine" class="alert alert-danger">You must provide an address</div>
+    </div>
+  </div>
+  <div class="col-xs-12 text-center">
+    <button class="btn btn-success" [disabled]="!newUserForm.form.valid"><i class="fa fa-plus"></i> Submit</button>
+  </div>
+</form>

@@ -1,0 +1,48 @@
+<html>
+  <head>
+    <title>BAHAMUT</title>
+    <base href="/">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
+    <!-- 1. Load libraries -->
+    <!-- IE required polyfill -->
+    <script src="node_modules/core-js/client/shim.min.js"></script>
+    <script src="node_modules/zone.js/dist/zone.js"></script>
+    <script src="node_modules/systemjs/dist/system.src.js"></script>
+    <script src="systemjs.config.js"></script>
+    <!-- 2. Load our 'modules' -->
+    <script>
+      System.import('main.js').catch(function(err){ console.error(err); });
+    </script>
+  </head>
+  <!-- 3. Display the application -->
+  <body class="bahamut">
+    <div class="header">
+      <div class="menu-button"><i class="fa fa-bars"></i></div>
+      <main-title></main-title>
+      <div class="search-container pull-right text-right">
+        <search></search>
+        <avatar></avatar>
+      </div>
+    </div>
+    <div class="body fluid-container">
+      <div class="col-lg-2 hidden-md hidden-sm hidden-xs menu-container">
+        <main-menu class='main-menu' id="mainMenu"></main-menu>
+      </div>
+      <div class="col-lg-10 content-container">
+        <content class="fluid-container">
+          <my-app>Loading...</my-app>
+        </content>
+      </div>
+      <loader class="loader"><div><span>Loading...</span></div></loader>
+    </div>
+    <div class="footer">
+    </div>
+
+    <!-- <script src="js/main.js"></script> -->
+
+  </body>
+</html>

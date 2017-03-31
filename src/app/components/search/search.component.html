@@ -1,0 +1,15 @@
+<div class="form-group" style="position:relative;">
+  <div class='input-group'>
+    <input #searchBox (keyup)="inputHandler($event.keyCode, searchBox.value)" type='text' class="form-control" placeholder="Find User" />
+    <span class="input-group-btn">
+      <button [disabled]="!legit" (click)="search()" type="button" class="btn btn-primary">
+        <i class="fa fa-search">&nbsp;</i>
+      </button>
+    </span>
+  </div>
+  <div class="search-results" [hidden]="!legit">
+    <div *ngFor="let user of users | async" (click)="gotoDetail(user)" class="result">
+    {{user.Nickname || user.FirstName+" "+user.LastName}}
+  </div>
+</div>
+</div>

@@ -1,0 +1,91 @@
+@import "_variables.scss";
+
+html, body{
+  margin:0;
+  padding:0;
+  height:100%;
+}
+
+.input-group-btn button.btn{
+  padding-top:11px;
+  padding-bottom:11px;
+}
+
+body.bahamut{
+  width:100%;
+  display:table;
+
+  .header,.footer{
+    display:table-row;
+    background:#000;
+    height:1px;
+  }
+  .header{
+    border-bottom:1px solid #666;
+    main-title, .menu-button{
+      display:inline-block;
+      font-size:34px;
+    }
+    .menu-button{
+      margin-right:5px;
+      cursor:pointer;
+    }
+  }
+
+  .body{
+    height:100%;
+  }
+  .fa{
+    font: FontAwesome;
+  }
+
+  .menu-container{
+    background:#000;
+    border:1px solid #666;
+    height:100%;
+  }
+}
+.search-container{
+  display:inline-block;
+  padding:5px;
+  &>*{
+    display:inline-block;
+    vertical-align: middle;
+  }
+  $size:34px;
+  .avatarded{
+    height:$size;
+    width:$size;
+    border-radius:50%;
+    background-position:50% 50%;
+    background-repeat:no-repeat;
+    background-size: 100%;
+    /* Prevent background color leak outs */
+    -webkit-background-clip: padding-box;
+    -moz-background-clip:    padding;
+    background-clip:         padding-box;
+  }
+}
+.loader{
+  position:fixed;
+  left:0;
+  right:0;
+  top:0;
+  bottom:0;
+  background: $body-bg;
+  &>*{
+    display: table;
+    height:100%;
+    width:100%;
+    &>*{
+      text-align: center;
+      vertical-align: middle;
+      display: table-cell;
+      font-size:4em;
+    }
+  }
+}
+ /*
+  * See https://github.com/angular/angular.io/blob/master/public/docs/_examples/styles.css
+  * for the full set of master styles used by the documentation samples
+  */

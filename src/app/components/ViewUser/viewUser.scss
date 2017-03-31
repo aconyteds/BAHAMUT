@@ -1,0 +1,20 @@
+.avatar-container{
+  padding:10px;
+  border-bottom:1px solid #666;
+  font-family:"Lucida Console";
+  margin-bottom:10px;
+  .avatar{
+    border:1px solid #ccc;
+    background:#111;
+    padding-left:0;
+    padding-right:0;
+    overflow:hidden;
+    .caption{
+      background:#999;
+      color:#000;
+      font-weight: bold;
+      font-size:18px;
+    }
+  }
+
+}

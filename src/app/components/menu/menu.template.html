@@ -1,0 +1,12 @@
+<div class="main-menu col-xs-12">
+  <div class="row" *ngFor="let option of options">
+    <a class="menu-button" routerLink="/{{option.href}}">{{option.label}}</a>
+  </div>
+  <hr/>
+  <div *ngIf="users.length">
+    <h4 class="text-center">View Users</h4>
+    <div class="row" *ngFor="let user of users">
+      <a class="menu-button" routerLink="user/{{user.id}}">{{user.Nickname}}</a>
+    </div>
+  </div>
+</div>

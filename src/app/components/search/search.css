@@ -1,0 +1,27 @@
+.form-group:hover .search-results {
+  transition: opacity 0s;
+  opacity: 1; }
+
+.form-group .search-results {
+  background: #222;
+  position: absolute;
+  border: 1px solid #ccc;
+  left: 0;
+  top: 100%;
+  right: 0;
+  z-index: 500;
+  opacity: 0;
+  transition: opacity .5s ease-out;
+  transition-delay: .5s;
+  box-shadow: #000 5px 5px 10px 1px; }
+  .form-group .search-results:empty {
+    display: none; }
+  .form-group .search-results > div.result {
+    text-align: left;
+    color: #FFF;
+    font-size: 14px;
+    padding: 3px 5px;
+    cursor: pointer;
+    transition: background .25s; }
+    .form-group .search-results > div.result:hover {
+      background: #333; }

@@ -1,0 +1,14 @@
+.menu-button{
+  display:inline-block;
+  background:#111;
+  font-size:18 px;
+  padding:5px 10px;
+  width:100%;
+  margin:2px 0px;
+  text-align:center;
+  border:1px solid #ccc;
+  text-decoration: none;
+  &:hover{
+    background-color:#333;
+  }
+}
