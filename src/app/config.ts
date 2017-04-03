@@ -6,6 +6,9 @@ export class  Config{
     {
       href: "user/new",
       label: "New User"
+    },{
+      href:"/",
+      label:"Directory"
     }
   ];
   static readonly suffixes: string[] = ["Sr.", "Jr.", "I", "II", "III"];

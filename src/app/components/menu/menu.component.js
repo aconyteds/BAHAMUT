@@ -10,27 +10,11 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
-var router_1 = require("@angular/router");
-var common_1 = require("@angular/common");
 var config_1 = require("../../config");
-var user_service_1 = require("../../services/user.service");
 var MenuComponent = (function () {
-    function MenuComponent(userService, route, location) {
-        this.userService = userService;
-        this.route = route;
-        this.location = location;
+    function MenuComponent() {
         this.options = config_1.Config.menuOptions;
-        this.users = [];
     }
-    MenuComponent.prototype.ngOnInit = function () {
-        this.getUsers();
-    };
-    MenuComponent.prototype.getUsers = function () {
-        var _this = this;
-        this.userService
-            .getUsers()
-            .then(function (users) { return _this.users = users; });
-    };
     return MenuComponent;
 }());
 MenuComponent = __decorate([
@@ -39,9 +23,7 @@ MenuComponent = __decorate([
         styleUrls: ["./menu.css"],
         templateUrl: "./menu.template.html"
     }),
-    __metadata("design:paramtypes", [user_service_1.UserService,
-        router_1.ActivatedRoute,
-        common_1.Location])
+    __metadata("design:paramtypes", [])
 ], MenuComponent);
 exports.MenuComponent = MenuComponent;
 //# sourceMappingURL=menu.component.js.map

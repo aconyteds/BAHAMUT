@@ -1,0 +1,18 @@
+.user {
+  margin-bottom: 10px;
+  margin-top: 10px; }
+  .user-container {
+    border: 1px solid #ccc;
+    background: #111;
+    cursor: pointer;
+    padding: 0;
+    box-sizing: padding-box;
+    transition: all 0.25s ease-in-out; }
+    .user-container:hover {
+      box-shadow: 2px 2px 10px 2px #000;
+      background: #222; }
+  .user-label {
+    background: #999;
+    color: #000;
+    font-family: "Lucida Console";
+    font-size: 18px; }

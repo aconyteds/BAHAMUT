@@ -16,15 +16,15 @@ var menu_component_1 = require("../components/menu/menu.component");
 var search_component_1 = require("../components/search/search.component");
 var avatar_1 = require("../components/avatar");
 var content_1 = require("../components/content");
-var viewUser_component_1 = require("../components/ViewUser/viewUser.component");
 //services
 var user_service_1 = require("../services/user.service");
 //Test Data imports
 var angular_in_memory_web_api_1 = require("angular-in-memory-web-api");
 var users_1 = require("../test/data/users");
 //Route Components
-var app_component_1 = require("../components/app.component");
 var newUser_component_1 = require("../components/NewUser/newUser.component");
+var viewUser_component_1 = require("../components/ViewUser/viewUser.component");
+var directory_component_1 = require("../components/Directory/directory.component");
 // import {RemoveLoader} from "../directives/loader";
 var AppModule = (function () {
     function AppModule() {
@@ -47,9 +47,9 @@ AppModule = __decorate([
             search_component_1.SearchComponent,
             avatar_1.AvatarComponent,
             content_1.ContentComponent,
-            app_component_1.AppComponent,
             newUser_component_1.NewUserForm,
-            viewUser_component_1.ViewUser
+            viewUser_component_1.ViewUser,
+            directory_component_1.Directory
         ],
         providers: [
             user_service_1.UserService

@@ -1,0 +1,23 @@
+.user{
+  $margin:10px;
+  margin-bottom:$margin;
+  margin-top:$margin;
+  &-container{
+    border:1px solid #ccc;
+    background:#111;
+    cursor:pointer;
+    padding:0;
+    box-sizing:padding-box;
+    transition:all 0.25s ease-in-out;
+    &:hover{
+      box-shadow:2px 2px $margin 2px #000;
+      background:#222;
+    }
+  }
+  &-label{
+    background:#999;
+    color:#000;
+    font-family:"Lucida Console";
+    font-size:18px;
+  }
+}

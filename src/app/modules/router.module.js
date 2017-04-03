@@ -8,14 +8,14 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var router_1 = require("@angular/router");
-var app_component_1 = require("../components/app.component");
+var directory_component_1 = require("../components/Directory/directory.component");
 var newUser_component_1 = require("../components/NewUser/newUser.component");
 var viewUser_component_1 = require("../components/ViewUser/viewUser.component");
 var appRoutes = [
     {
         path: "",
         pathMatch: "full",
-        component: app_component_1.AppComponent
+        component: directory_component_1.Directory
     }, {
         path: "user/new",
         component: newUser_component_1.NewUserForm

@@ -1,7 +1,7 @@
 import { NgModule }      from '@angular/core';
 import {RouterModule, Routes} from "@angular/router";
 
-import {AppComponent} from "../components/app.component";
+import {Directory} from "../components/Directory/directory.component";
 import {NewUserForm} from "../components/NewUser/newUser.component";
 import {ViewUser} from "../components/ViewUser/viewUser.component";
 
@@ -9,7 +9,7 @@ const appRoutes: Routes = [
   {
     path:"",
     pathMatch:"full",
-    component: AppComponent
+    component: Directory
   },{
     path:"user/new",
     component: NewUserForm

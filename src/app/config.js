@@ -10,6 +10,9 @@ Config.menuOptions = [
     {
         href: "user/new",
         label: "New User"
+    }, {
+        href: "/",
+        label: "Directory"
     }
 ];
 Config.suffixes = ["Sr.", "Jr.", "I", "II", "III"];
