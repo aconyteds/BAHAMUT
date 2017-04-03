@@ -22,6 +22,7 @@ var ViewUser = (function () {
         this.route = route;
         this.location = location;
         this.fb = fb;
+        this.loadingMessage = "Loading...";
         this.suffixes = config_1.Config.suffixes;
         this.createForm();
     }

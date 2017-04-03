@@ -17,6 +17,7 @@ import {Config} from "../../config";
 export class ViewUser implements OnInit {
   user:User;
   userForm: FormGroup;
+  loadingMessage:string = "Loading...";
   private suffixes = Config.suffixes;
   constructor(
     private userService: UserService,
