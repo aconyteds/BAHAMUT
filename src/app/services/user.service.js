@@ -38,9 +38,9 @@ var UserService = (function () {
             .then(function () { return null; })
             .catch(this.handleError);
     };
-    UserService.prototype.create = function (User) {
+    UserService.prototype.create = function (user) {
         return this.http
-            .post(this.userUrl, JSON.stringify(User), { headers: this.headers })
+            .post(this.userUrl, JSON.stringify(user), { headers: this.headers })
             .toPromise()
             .then(function (res) { return res.json().data; })
             .catch(this.handleError);

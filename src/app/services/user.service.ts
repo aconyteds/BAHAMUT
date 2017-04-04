@@ -29,9 +29,9 @@ export class UserService {
       .then(() => null)
       .catch(this.handleError);
   }
-  create(User: User): Promise<User> {
+  create(user: User): Promise<User> {
     return this.http
-      .post(this.userUrl, JSON.stringify(User), {headers: this.headers})
+      .post(this.userUrl, JSON.stringify(user), {headers: this.headers})
       .toPromise()
       .then(res => res.json().data as User)
       .catch(this.handleError);
