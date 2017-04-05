@@ -9,13 +9,17 @@ html, body {
 
 body.bahamut {
   width: 100%;
-  display: table; }
+  display: table;
+  border-collapse: collapse;
+  font-family: "Source Code Pro", monospace; }
   body.bahamut .header, body.bahamut .footer {
     display: table-row;
-    background: #000;
+    background: #171B20;
     height: 1px; }
   body.bahamut .header {
-    border-bottom: 1px solid #666; }
+    border-bottom: 1px solid #333; }
+    body.bahamut .header-content {
+      padding: 13px 22px; }
     body.bahamut .header main-title, body.bahamut .header .menu-button {
       display: inline-block;
       font-size: 34px; }
@@ -23,13 +27,28 @@ body.bahamut {
       margin-right: 5px;
       cursor: pointer; }
   body.bahamut .body {
-    height: 100%; }
+    height: 100%;
+    position: relative; }
   body.bahamut .fa {
     font: FontAwesome; }
   body.bahamut .menu-container {
-    background: #000;
-    border: 1px solid #666;
-    height: 100%; }
+    background: #171B20;
+    height: 100%;
+    z-index: 500;
+    padding: 13px 22px; }
+    @media (min-width: 480px) {
+      body.bahamut .menu-container {
+        position: absolute;
+        left: 0;
+        display: none;
+        box-shadow: 2px 0 10px 1px #000; } }
+    @media (min-width: 992px) {
+      body.bahamut .menu-container {
+        position: relative;
+        display: inline-block;
+        box-shadow: none; } }
+    body.bahamut .menu-container[style*=none] + .content-container {
+      width: 100%; }
 
 .search-container {
   display: inline-block;
@@ -55,7 +74,8 @@ body.bahamut {
   right: 0;
   top: 0;
   bottom: 0;
-  background: #272B30; }
+  background: #272B30;
+  z-index: 999; }
   .loader > * {
     display: table;
     height: 100%;

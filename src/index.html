@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
+    <link href='//fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet'>
     <!-- 1. Load libraries -->
     <!-- IE required polyfill -->
     <script src="node_modules/core-js/client/shim.min.js"></script>
@@ -21,18 +22,19 @@
   <!-- 3. Display the application -->
   <body class="bahamut">
     <div class="header">
-      <div class="menu-button"><i class="fa fa-bars"></i></div>
-      <main-title></main-title>
-      <div class="search-container pull-right text-right">
-        <search></search>
-        <avatar></avatar>
-      </div>
+        <div class="header-content">
+          <menu-button class="menu-button"><i class='fa fa-bars'></i></menu-button>
+          <main-title></main-title>
+          <div class="search-container pull-right text-right">
+            <search></search>
+            <avatar></avatar>
+          </div>
+        </div>
     </div>
     <div class="body fluid-container">
-      <div class="col-lg-2 hidden-md hidden-sm hidden-xs menu-container">
-        <main-menu class='main-menu' id="mainMenu"></main-menu>
-      </div>
-      <div class="col-lg-10 content-container">
+      <main-menu class="col-lg-2 col-xs-12 col-sm-4 col-md-3 menu-container">
+      </main-menu>
+      <div class="col-lg-10 col-md-9 col-xs-12 content-container">
         <content class="fluid-container">
           <my-app>Loading...</my-app>
         </content>

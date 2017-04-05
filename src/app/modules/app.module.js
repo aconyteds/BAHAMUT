@@ -9,8 +9,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var platform_browser_1 = require("@angular/platform-browser");
 var forms_1 = require("@angular/forms");
-var router_module_1 = require("./router.module");
 var http_1 = require("@angular/http");
+//Bootstraped Components
 var title_component_1 = require("../components/title.component");
 var menu_component_1 = require("../components/menu/menu.component");
 var search_component_1 = require("../components/search/search.component");
@@ -22,10 +22,11 @@ var user_service_1 = require("../services/user.service");
 var angular_in_memory_web_api_1 = require("angular-in-memory-web-api");
 var users_1 = require("../test/data/users");
 //Route Components
+var router_module_1 = require("./router.module");
 var newUser_component_1 = require("../components/NewUser/newUser.component");
 var viewUser_component_1 = require("../components/ViewUser/viewUser.component");
 var directory_component_1 = require("../components/Directory/directory.component");
-// import {RemoveLoader} from "../directives/loader";
+//Directives
 var AppModule = (function () {
     function AppModule() {
     }

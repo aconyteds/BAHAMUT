@@ -1,14 +1,16 @@
 .menu-button{
   display:inline-block;
-  background:#111;
+  color:#444;
   font-size:18 px;
   padding:5px 10px;
   width:100%;
   margin:2px 0px;
-  text-align:center;
-  border:1px solid #ccc;
   text-decoration: none;
+  transition:all .25s ease-in-out;
   &:hover{
-    background-color:#333;
+    color:#64ad70;
+  }
+  &:before{
+    content:"\/\/ "
   }
 }

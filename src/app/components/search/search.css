@@ -3,9 +3,8 @@
   opacity: 1; }
 
 .form-group .search-results {
-  background: #222;
+  background: #171B20;
   position: absolute;
-  border: 1px solid #ccc;
   left: 0;
   top: 100%;
   right: 0;
@@ -18,10 +17,10 @@
     display: none; }
   .form-group .search-results > div.result {
     text-align: left;
-    color: #FFF;
+    color: #64ad70;
     font-size: 14px;
     padding: 3px 5px;
     cursor: pointer;
-    transition: background .25s; }
+    transition: color .25s; }
     .form-group .search-results > div.result:hover {
-      background: #333; }
+      color: #FFF; }

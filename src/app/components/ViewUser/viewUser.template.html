@@ -1,81 +1,77 @@
 <div [hidden]="!user" *ngIf="user">
   <nav class="row avatar-container">
-    <div *ngIf="user.AvatarURL" class="text-center avatar col-xs-3 col-sm-2" style="display:inline-block;">
+    <div *ngIf="user.AvatarURL" class="text-center avatar col-xs-3" style="display:inline-block;">
       <img [src]="user.AvatarURL"/>
       <div class="col-xs-12 caption">{{user.Nickname}}</div>
     </div>
-    <div class="col-xs-5 col-sm-6">
+    <div class="col-xs-9">
       <h3>{{user.FirstName}} {{user.LastName}}<span *ngIf="userForm.value.Suffix"> {{userForm.value.Suffix}}</span></h3>
+      <div>{{userForm.value.Address}}</div>
       <div *ngIf="userForm.value.Department">{{userForm.value.Department}}</div>
       <div *ngIf="userForm.value.Position">{{userForm.value.Position}}<span *ngIf="userForm.value.Office"> at {{userForm.value.Office}}</span></div>
       <div *ngIf="userForm.value.Spouse">Married to {{userForm.value.Spouse}}</div>
-    </div>
-    <div class="col-xs-4 col-sm-4 text-right">
-      <div>{{userForm.value.Address}}</div>
     </div>
   </nav>
   <nav class="row form-container">
     <form class="form-horizontal" [formGroup]="userForm" novalidate>
       <div class="col-xs-12 col-sm-6">
         <div class="form-group">
-            <label class="col-sm-2 control-label" for="Department">Department:</label>
-            <div class="col-sm-10">
-              <input class="form-control" type="text" id="Department" placeholder="Department" formControlName="Department">
-            </div>
+          <label class="col-sm-3 col-md-3 control-label" for="Address">Address:</label>
+          <div class="col-sm-9 col-md-9">
+            <input class="form-control" type="text" id="Address" placeholder="Address" formControlName="Address">
+          </div>
         </div>
         <div class="form-group">
-          <label class="col-sm-2 control-label" for="Office">Office:</label>
-          <div class="col-sm-10">
+          <label class="col-sm-3 col-md-3 control-label" for="Nickname">Nickname:</label>
+          <div class="col-sm-9 col-md-9">
+            <input class="form-control" type="text" id="Nickname" placeholder="Nickname" formControlName="Nickname">
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="col-sm-3 col-md-3 control-label" for="Office">Office:</label>
+          <div class="col-sm-9 col-md-9">
             <input class="form-control" type="text" id="Office" placeholder="Office" formControlName="Office">
           </div>
         </div>
         <div class="form-group">
-          <label class="col-sm-2 control-label" for="Position">Position:</label>
-          <div class="col-sm-10">
+          <label class="col-sm-3 col-md-3 control-label" for="Position">Position:</label>
+          <div class="col-sm-9 col-md-9">
             <input class="form-control" type="text" id="Position" placeholder="Position" formControlName="Position">
           </div>
         </div>
-          <div class="form-group">
-            <label class="col-sm-2 control-label" for="Nickname">Nickname:</label>
-            <div class="col-sm-10">
-              <input class="form-control" type="text" id="Nickname" placeholder="Nickname" formControlName="Nickname">
-            </div>
+        <div class="form-group">
+          <label class="col-sm-3 col-md-3 control-label" for="Suffix">Suffix:</label>
+          <div class="col-sm-9 col-md-9">
+            <select class="form-control" id="Suffix"  formControlName="Suffix" placeholder="None">
+              <option *ngFor="let suf of suffixes" [value]="suf">{{suf}}</option>
+            </select>
           </div>
-          <div class="form-group">
-            <label class="col-sm-2 control-label" for="Suffix">Suffix:</label>
-            <div class="col-sm-10">
-              <select class="form-control" id="Suffix"  formControlName="Suffix" placeholder="None">
-                <option *ngFor="let suf of suffixes" [value]="suf">{{suf}}</option>
-              </select>
-            </div>
-          </div>
+        </div>
       </div>
       <div class="col-xs-12 col-sm-6">
         <div class="form-group">
-          <label class="col-sm-2 control-label" for="Manager">Manager:</label>
-          <div class="col-sm-10">
+            <label class="col-sm-3 col-md-3 control-label" for="Department">Department:</label>
+            <div class="col-sm-9 col-md-9">
+              <input class="form-control" type="text" id="Department" placeholder="Department" formControlName="Department">
+            </div>
+        </div>
+        <div class="form-group">
+          <label class="col-sm-3 col-md-3 control-label" for="Manager">Manager:</label>
+          <div class="col-sm-9 col-md-9">
             <input class="form-control" type="text" id="Manager" placeholder="Manager" formControlName="Manager">
           </div>
         </div>
         <div class="form-group">
-          <label class="col-sm-2 control-label" for="Assistant">Assistant:</label>
-          <div class="col-sm-10">
+          <label class="col-sm-3 col-md-3 control-label" for="Assistant">Assistant:</label>
+          <div class="col-sm-9 col-md-9">
             <input class="form-control" type="text" id="Assistant" placeholder="Assistant" formControlName="Assistant">
           </div>
         </div>
         <div class="col-sm-12 hidden-xs form-group" style="height:38px;">&nbsp;</div>
         <div class="form-group">
-          <label class="col-sm-2 control-label" for="Spouse">Spouse:</label>
-          <div class="col-sm-10">
+          <label class="col-sm-3 col-md-3 control-label" for="Spouse">Spouse:</label>
+          <div class="col-sm-9 col-md-9">
             <input class="form-control" type="text" id="Spouse" placeholder="Spouse" formControlName="Spouse">
-          </div>
-        </div>
-      </div>
-      <div class="col-xs-12">
-        <div class="form-group">
-          <label class="col-sm-1 control-label" for="Address">Address:</label>
-          <div class="col-sm-11">
-            <input class="form-control" type="text" id="Address" placeholder="Address" formControlName="Address">
           </div>
         </div>
       </div>

@@ -23,4 +23,4 @@ var UserModel = (function () {
     return UserModel;
 }());
 exports.UserModel = UserModel;
-//# sourceMappingURL=User.js.map
+//# sourceMappingURL=user.js.map

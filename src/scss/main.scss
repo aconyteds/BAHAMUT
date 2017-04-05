@@ -1,5 +1,7 @@
 @import "_variables.scss";
 
+$header-bg:#171B20;
+
 html, body{
   margin:0;
   padding:0;
@@ -14,14 +16,20 @@ html, body{
 body.bahamut{
   width:100%;
   display:table;
+  border-collapse:collapse;
+  font-family:"Source Code Pro", monospace;
 
   .header,.footer{
     display:table-row;
-    background:#000;
+    background:$header-bg;
     height:1px;
   }
   .header{
-    border-bottom:1px solid #666;
+    border-bottom:1px solid #333;
+
+    &-content{
+      padding:13px 22px;
+    }
     main-title, .menu-button{
       display:inline-block;
       font-size:34px;
@@ -34,15 +42,31 @@ body.bahamut{
 
   .body{
     height:100%;
+    position:relative;
   }
   .fa{
     font: FontAwesome;
   }
 
   .menu-container{
-    background:#000;
-    border:1px solid #666;
+    background:$header-bg;
     height:100%;
+    z-index:500;
+    padding:13px 22px;
+    @media(min-width: $screen-xs){
+      position:absolute;
+      left:0;
+      display:none;
+      box-shadow: 2px 0 10px 1px #000;
+    }
+    @media(min-width:$screen-md){
+      position:relative;
+      display:inline-block;
+      box-shadow:none;
+    }
+    &[style*=none]+.content-container{
+      width:100%;
+    }
   }
 }
 .search-container{
@@ -73,6 +97,7 @@ body.bahamut{
   top:0;
   bottom:0;
   background: $body-bg;
+  z-index:999;
   &>*{
     display: table;
     height:100%;
